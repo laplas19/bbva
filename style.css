@@ -1,29 +1,142 @@
-body {
-    font-family: Arial, sans-serif;
+/* Общие настройки стиля (Dark Theme) */
+* {
     margin: 0;
-    background-color: #f4f7f9;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
 }
-.container { max-width: 600px; margin: 0 auto; padding: 20px; }
-header { background: #004481; padding: 15px 0; color: white; }
-.logo { font-size: 24px; font-weight: bold; text-align: center; }
 
-.promo-box { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 20px; text-align: center; }
-h1 { color: #004481; font-size: 22px; }
-.disclaimer { text-align: left; background: #f9f9f9; padding: 15px; border-left: 4px solid #004481; margin: 20px 0; }
-.btn-main { display: inline-block; background: #1464A5; color: white; padding: 15px 30px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 15px; border: none; cursor: pointer; }
-
-.messenger-buttons { display: flex; gap: 10px; flex-direction: column; margin: 20px 0; }
-.btn-msg { padding: 15px; border-radius: 4px; text-decoration: none; color: white; font-weight: bold; }
-.tg { background: #0088cc; }
-.wa { background: #25d366; }
-
-.toast {
-    position: fixed; bottom: 20px; left: -300px; background: white; padding: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-radius: 8px; display: flex; align-items: center; gap: 10px;
-    transition: left 0.5s ease; z-index: 1000; border-left: 4px solid #25d366;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d1117; /* Темный фон, как на git-hub-lac */
+    color: #e6edf3; /* Светлый текст */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
-.toast.show { left: 20px; }
-.toast-icon { background: #25d366; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; }
 
-.review-card { background: #fff; padding: 15px; margin-top: 10px; border-radius: 5px; font-style: italic; border: 1px solid #ddd; }
+.container {
+    width: 100%;
+    max-width: 650px; /* Ширина карточки */
+    text-align: center;
+}
+
+/* Шапка с логотипом */
+.header {
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 120px;
+    filter: brightness(0) invert(1); /* Делаем лого белым */
+}
+
+/* Основная карточка (Glassmorphism + Shadow) */
+.main-card {
+    background: rgba(22, 27, 34, 0.8); /* Полупрозрачный фон */
+    border: 1px solid #30363d; /* Тонкая рамка */
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Глубокая тень */
+    transition: transform 0.3s ease;
+}
+
+.main-card:hover {
+    transform: translateY(-5px); /* Легкое всплытие при наведении */
+}
+
+/* Заголовки */
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Градиент BBVA */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Описание */
+.description {
+    font-size: 1.1rem;
+    color: #8b949e;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Список преимуществ */
+.features-list {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 40px;
+    color: #e6edf3;
+}
+
+.features-list li {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.features-list li span {
+    color: #00c6ff; /* Голубые галочки */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Неоновая кнопка (стиль с твоего сайта) */
+.btn-primary {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Градиент */
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 198, 255, 0.4); /* Мягкое свечение */
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 25px rgba(0, 198, 255, 0.7); /* Сильное свечение */
+    transform: scale(1.03); /* Легкое увеличение */
+}
+
+/* Таймер */
+.timer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+#countdown {
+    color: #ff4500; /* Оранжевый цвет времени */
+    font-weight: bold;
+}
+
+/* Футер */
+.footer {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #484f58;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 480px) {
+    .main-card {
+        padding: 30px 20px;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    .btn-primary {
+        font-size: 1rem;
+        padding: 14px 24px;
+    }
+}
