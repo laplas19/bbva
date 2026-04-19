@@ -45,37 +45,24 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* 3. ШАПКА */
-.header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-/* Обновленный стиль логотипа для мобильных */
 .header {
     text-align: center;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
 }
 
-.logo-svg {
-    width: 140px; /* Размер для ПК */
+.logo-img {
+    width: 120px; /* Размер для компьютера */
     height: auto;
+    filter: brightness(0) invert(1); /* Делает логотип чисто белым */
     display: block;
-    transition: transform 0.3s ease;
 }
 
-/* Настройки для телефонов */
 @media (max-width: 600px) {
-    .header {
-        margin-bottom: 20px;
-    }
-    .logo-svg {
-        width: 110px; /* Чуть меньше на телефонах */
-        min-height: 24px; /* Чтобы не пропадал при загрузке */
+    .logo-img {
+        width: 100px; /* Чуть меньше для мобильных */
     }
 }
 
