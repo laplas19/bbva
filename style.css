@@ -158,3 +158,43 @@ body {
 .toast-icon { font-size: 1.5rem; }
 
 .footer { text-align: center; color: #484f58; font-size: 0.8rem; }
+/* Дисклеймер / Инструкция */
+.disclaimer-box {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid #00d2ff;
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #c9d1d9;
+}
+
+.disclaimer-box h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.disclaimer-box ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.disclaimer-box li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.disclaimer-box li strong {
+    color: #00d2ff;
+}
+
+.disclaimer-confirm {
+    font-weight: 600;
+    color: #fff;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
