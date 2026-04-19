@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>BBVA - Exklusive Bonusaktion</title>
+    <title>BBVA - Bonusaktion 300€</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,186 +11,115 @@
     <div id="notification-container"></div>
 
     <div class="container">
-        <header class="header" translate="no">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/BBVA_logo.svg/2560px-BBVA_logo.svg.png" 
-         alt="BBVA Logo" 
-         class="logo-img">
-</header>
+        <header class="header">
+            <svg width="120" height="28" viewBox="0 0 550 125" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff" d="M102.6 0H78.1l-25.2 60L27.6 0H3.1v120h23.2V37.7L50.2 93h5.4l23.8-55.3V120h23.2V0zm112.5 0h-24.5l-25.2 60-25.3-60h-24.5v120h23.2V37.7l26.6 63.4 26.6-63.4V120h23.1V0zm115.1 0h-57.8v120h57.8c32.4 0 55.4-22.1 55.4-60S362.6 0 330.2 0zm0 96.8h-34.6V23.2h34.6c18.5 0 32.1 12.8 32.1 36.8s-13.6 36.8-32.1 36.8zM550 0h-24.5l-52.6 120h25.4l11-26.6h57.2l11 26.6h25.1L550 0zm-31.1 72.8l19-46.1 19 46.1h-38z"/>
+            </svg>
+        </header>
 
         <main class="main-card">
             <h1 class="title">Sichern Sie sich <span class="highlight">300 €</span> Willkommensbonus</h1>
-            
-            <p class="description">
-                Eröffnen Sie heute Ihr Online-Konto und erhalten Sie eine Gutschrift von 300 € direkt nach erfolgreicher Verifizierung.
-            </p>
+            <p class="description">Eröffnen Sie heute Ihr Online-Konto und erhalten Sie 300 € Gutschrift.</p>
 
             <div class="disclaimer-box">
                 <h3>⚠️ Voraussetzungen:</h3>
                 <ul>
-                    <li><strong>Neukunden:</strong> Keine vorherigen BBVA-Konten.</li>
-                    <li><strong>Bonität:</strong> Positive Schufa (Check via <em>Bonify</em>).</li>
-                    <li><strong>Verifizierung:</strong> Kurzer Videoanruf (VideoIdent) erforderlich.</li>
-                    <li><strong>Auszahlung:</strong> 300 € via <strong>PayPal</strong> oder <strong>IBAN</strong>.</li>
+                    <li><strong>Neukunden:</strong> Nur für erste Kontoeröffnung.</li>
+                    <li><strong>Bonität:</strong> Positive Schufa (Check via Bonify).</li>
+                    <li><strong>Verifizierung:</strong> VideoIdent Verfahren erforderlich.</li>
                 </ul>
             </div>
 
             <div class="action-area">
                 <a href="success.html" class="btn-primary">Konto eröffnen</a>
-                <p class="timer">Angebot endet in: <span id="countdown">14:59</span></p>
+                <p class="timer">Angebot endet in: <span id="countdown">--:--</span></p>
             </div>
         </main>
 
         <section class="reviews-section">
             <h2 class="section-title">Kundenbewertungen</h2>
             <div class="reviews-grid">
-    <div class="review-card">
-        <div class="review-header">
-            <img src="https://i.pravatar.cc/150?u=stefan" alt="User" class="avatar">
-            <div class="author-info">
-                <p class="review-author">Stefan Schneider</p>
-                <p class="review-date">Vor 2 Tagen</p>
-            </div>
-        </div>
-        <p class="review-text">"Habe die 300€ tatsächlich nach der Verifizierung erhalten. Der Prozess war dank VideoIdent sehr professionell."</p>
-        <div class="stars">★★★★★</div>
-    </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/150?u=markus" class="avatar">
+                        <div class="author-info">
+                            <p class="review-author">Markus Schneider</p>
+                            <p class="review-date">Vor 1 Tag</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"300 Euro erhalten! Der Video-Anruf dauerte nur 5 Minuten. Sehr seriös."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
 
-    <div class="review-card">
-        <div class="review-header">
-            <img src="https://i.pravatar.cc/150?u=julia" alt="User" class="avatar">
-            <div class="author-info">
-                <p class="review-author">Julia Krüger</p>
-                <p class="review-date">Vor 5 Tagen</p>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/150?u=julia" class="avatar">
+                        <div class="author-info">
+                            <p class="review-author">Julia Hoffmann</p>
+                            <p class="review-date">Vor 4 Tagen</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"Beste Banking App. Der Bonus kam direkt nach der ersten Einzahlung."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
             </div>
-        </div>
-        <p class="review-text">"Endlich eine Bank, die hält, was sie verspricht. Die App ist super intuitiv und der Bonus kam per PayPal."</p>
-        <div class="stars">★★★★★</div>
-    </div>
-</div>
         </section>
 
         <footer class="footer">
-            <p>© 2024 BBVA S.A.</p>
+            <p>© 2026 BBVA S.A. Alle Rechte vorbehalten.</p>
         </footer>
     </div>
 
-  <script>
-    // --- ТАЙМЕР (не сбрасывается при обновлении) ---
-    function startTimer() {
-        const display = document.querySelector('#countdown');
-        const duration = 15 * 60; 
-        let endTime = localStorage.getItem('bbva_timer_end');
-        let now = Math.floor(Date.now() / 1000);
+    <script>
+        // Таймер с памятью
+        function startTimer() {
+            const display = document.querySelector('#countdown');
+            const duration = 15 * 60;
+            let endTime = localStorage.getItem('bbva_timer_end');
+            let now = Math.floor(Date.now() / 1000);
 
-        if (!endTime || now > endTime) {
-            endTime = now + duration;
-            localStorage.setItem('bbva_timer_end', endTime);
-        }
-
-        setInterval(function () {
-            now = Math.floor(Date.now() / 1000);
-            let remaining = endTime - now;
-            if (remaining <= 0) {
+            if (!endTime || now > endTime) {
                 endTime = now + duration;
                 localStorage.setItem('bbva_timer_end', endTime);
-                remaining = duration;
             }
-            let minutes = Math.floor(remaining / 60);
-            let seconds = remaining % 60;
-            display.textContent = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
-        }, 1000);
-    }
 
-    // --- УВЕДОМЛЕНИЯ С РАНДОМНЫМ ИНТЕРВАЛОМ ---
-    const users = [
-        {name: "Markus Weber", img: "1"},
-        {name: "Andreas Koch", img: "2"},
-        {name: "Christian Bauer", img: "3"},
-        {name: "Hannah Scholz", img: "4"},
-        {name: "Lukas Richter", img: "5"},
-        {name: "Sabine Hoffmann", img: "6"}
-    ];
-
-    function showNotification() {
-        const container = document.getElementById('notification-container');
-        if (container.childElementCount > 0) return; // Только одно уведомление за раз
-
-        const user = users[Math.floor(Math.random() * users.length)];
-        const toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.innerHTML = `
-            <div class="toast-content">
-                <img src="https://i.pravatar.cc/150?u=${user.img}" class="toast-avatar">
-                <div>
-                    <strong>${user.name}</strong>
-                    <div style="font-size: 0.75rem; color: #8b949e;">Hat gerade 300€ erhalten</div>
-                </div>
-            </div>`;
-        
-        container.appendChild(toast);
-        setTimeout(() => toast.classList.add('show'), 100);
-
-        setTimeout(() => {
-            toast.classList.remove('show');
-            setTimeout(() => toast.remove(), 500);
-        }, 5000);
-
-        // Планируем следующее появление через рандомное время (от 15 до 40 секунд)
-        const nextDelay = Math.floor(Math.random() * (40000 - 15000 + 1)) + 15000;
-        setTimeout(showNotification, nextDelay);
-    }
-
-    window.onload = function () {
-        startTimer();
-        // Первое уведомление появится через 5-10 секунд после входа
-        setTimeout(showNotification, 7000); 
-    };
-</script>
-    // Твои уведомления (оставляем без изменений)
-    const names = ["Stefan", "Andreas", "Lukas", "Max", "Julia", "Christian", "Hannah"];
-    function showNotification() {
-        const container = document.getElementById('notification-container');
-        if (container.childElementCount > 1) return;
-        const name = names[Math.floor(Math.random() * names.length)];
-        const toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.innerHTML = `<div class="toast-content"><span class="toast-icon">💰</span><div><strong>${name}</strong> +300€ erhalten.</div></div>`;
-        container.appendChild(toast);
-        setTimeout(() => toast.classList.add('show'), 100);
-        setTimeout(() => {
-            toast.classList.remove('show');
-            setTimeout(() => toast.remove(), 500);
-        }, 4000);
-    }
-
-    window.onload = function () {
-        startTimer();
-        setInterval(showNotification, 8000);
-        setTimeout(showNotification, 2000);
-    };
-</script>
-
-        const names = ["Stefan", "Andreas", "Lukas", "Max", "Julia", "Christian", "Hannah"];
-        function showNotification() {
-            const container = document.getElementById('notification-container');
-            if (container.childElementCount > 1) return; // Чтобы не спамить на маленьком экране
-            const name = names[Math.floor(Math.random() * names.length)];
-            const toast = document.createElement('div');
-            toast.className = 'toast';
-            toast.innerHTML = `<div class="toast-content"><span class="toast-icon">💰</span><div><strong>${name}</strong> +300€ erhalten.</div></div>`;
-            container.appendChild(toast);
-            setTimeout(() => toast.classList.add('show'), 100);
-            setTimeout(() => {
-                toast.classList.remove('show');
-                setTimeout(() => toast.remove(), 500);
-            }, 4000);
+            setInterval(() => {
+                now = Math.floor(Date.now() / 1000);
+                let remaining = endTime - now;
+                if (remaining <= 0) { endTime = now + duration; localStorage.setItem('bbva_timer_end', endTime); remaining = duration; }
+                let min = Math.floor(remaining / 60);
+                let sec = remaining % 60;
+                display.textContent = (min < 10 ? "0"+min : min) + ":" + (sec < 10 ? "0"+sec : sec);
+            }, 1000);
         }
 
-        window.onload = function () {
-            startTimer(60 * 15, document.querySelector('#countdown'));
-            setInterval(showNotification, 8000);
-            setTimeout(showNotification, 2000);
-        };
+        // Редкие уведомления с рандомным интервалом
+        const users = [
+            {name: "Andreas Wagner", img: "a1"}, {name: "Thomas Müller", img: "a2"},
+            {name: "Sabine Koch", img: "a3"}, {name: "Lukas Weber", img: "a4"}
+        ];
+
+        function showNotification() {
+            const container = document.getElementById('notification-container');
+            if (container.childElementCount > 0) return;
+
+            const user = users[Math.floor(Math.random() * users.length)];
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `
+                <div class="toast-content">
+                    <img src="https://i.pravatar.cc/150?u=${user.img}" class="toast-avatar">
+                    <div><strong>${user.name}</strong><br><span style="font-size:0.7rem;color:#8b949e">Bonus +300€ erhalten</span></div>
+                </div>`;
+            container.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 100);
+            setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 500); }, 4000);
+
+            // Рандомная пауза перед следующим уведомлением (от 20 до 50 секунд)
+            setTimeout(showNotification, Math.floor(Math.random() * 30000) + 20000);
+        }
+
+        window.onload = () => { startTimer(); setTimeout(showNotification, 5000); };
     </script>
 </body>
 </html>
