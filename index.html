@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>BBVA - Exklusive Bonusaktion</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -16,29 +16,25 @@
         </header>
 
         <main class="main-card">
-            <h1 class="title">Sichern Sie sich Ihren <span class="highlight">300 €</span> Willkommensbonus</h1>
+            <h1 class="title">Sichern Sie sich <span class="highlight">300 €</span> Willkommensbonus</h1>
             
             <p class="description">
                 Eröffnen Sie heute Ihr Online-Konto und erhalten Sie eine Gutschrift von 300 € direkt nach erfolgreicher Verifizierung.
             </p>
 
             <div class="disclaimer-box">
-                <h3>⚠️ Wichtige Voraussetzungen & Informationen:</h3>
+                <h3>⚠️ Voraussetzungen:</h3>
                 <ul>
-                    <li><strong>Neukunden:</strong> Sie dürfen zuvor noch kein Konto bei der BBVA eröffnet haben.</li>
-                    <li><strong>Bonität:</strong> Eine normale/positive Schufa ist erforderlich. Sie können Ihren Score vorab kostenlos auf <em>Bonify</em> prüfen.</li>
-                    <li><strong>Verifizierung:</strong> Für die erfolgreiche Kontofreischaltung ist ein kurzer Videoanruf mit einem Bankmitarbeiter erforderlich.</li>
-                    <li><strong>Vergütung:</strong> Die Prämie für die erfolgreiche Erstellung beträgt 300 €. Die Auszahlung erfolgt sicher via <strong>PayPal</strong> oder <strong>IBAN-Überweisung</strong>.</li>
-                    <li><strong>Perspektive:</strong> Bei zuverlässiger Abwicklung ist eine langfristige Zusammenarbeit möglich.</li>
+                    <li><strong>Neukunden:</strong> Keine vorherigen BBVA-Konten.</li>
+                    <li><strong>Bonität:</strong> Positive Schufa (Check via <em>Bonify</em>).</li>
+                    <li><strong>Verifizierung:</strong> Kurzer Videoanruf (VideoIdent) erforderlich.</li>
+                    <li><strong>Auszahlung:</strong> 300 € via <strong>PayPal</strong> oder <strong>IBAN</strong>.</li>
                 </ul>
-                <p class="disclaimer-confirm">Mit dem Klick auf den Button bestätigen Sie, dass Sie diese Bedingungen gelesen haben und akzeptieren.</p>
             </div>
 
             <div class="action-area">
-                <a href="success.html" class="btn-primary">
-                    Einverstanden – Konto eröffnen
-                </a>
-                <p class="timer">Angebot läuft ab in: <span id="countdown">14:59</span></p>
+                <a href="success.html" class="btn-primary">Konto eröffnen</a>
+                <p class="timer">Angebot endet in: <span id="countdown">14:59</span></p>
             </div>
         </main>
 
@@ -50,18 +46,14 @@
                     <p class="review-author">Thomas M. ★★★★★</p>
                 </div>
                 <div class="review-card">
-                    <p class="review-text">"Beste Banking-App, die ich je genutzt habe. Seriös und schnell."</p>
+                    <p class="review-text">"Beste Banking-App. Seriös und schnell."</p>
                     <p class="review-author">Sabine W. ★★★★★</p>
-                </div>
-                <div class="review-card">
-                    <p class="review-text">"Endlich ein Konto ohne versteckte Gebühren. Der Bonus war das Sahnehäubchen."</p>
-                    <p class="review-author">Lukas K. ★★★★★</p>
                 </div>
             </div>
         </section>
 
         <footer class="footer">
-            <p>© 2024 Banco Bilbao Vizcaya Argentaria, S.A.</p>
+            <p>© 2024 BBVA S.A.</p>
         </footer>
     </div>
 
@@ -79,17 +71,11 @@
         const names = ["Stefan", "Andreas", "Lukas", "Max", "Julia", "Christian", "Hannah"];
         function showNotification() {
             const container = document.getElementById('notification-container');
+            if (container.childElementCount > 1) return; // Чтобы не спамить на маленьком экране
             const name = names[Math.floor(Math.random() * names.length)];
             const toast = document.createElement('div');
             toast.className = 'toast';
-            toast.innerHTML = `
-                <div class="toast-content">
-                    <span class="toast-icon">💰</span>
-                    <div>
-                        <strong>${name}</strong> hat gerade den <strong>300 €</strong> Bonus erhalten.
-                        <br><small>Gerade eben</small>
-                    </div>
-                </div>`;
+            toast.innerHTML = `<div class="toast-content"><span class="toast-icon">💰</span><div><strong>${name}</strong> +300€ erhalten.</div></div>`;
             container.appendChild(toast);
             setTimeout(() => toast.classList.add('show'), 100);
             setTimeout(() => {
@@ -101,7 +87,7 @@
         window.onload = function () {
             startTimer(60 * 15, document.querySelector('#countdown'));
             setInterval(showNotification, 8000);
-            showNotification();
+            setTimeout(showNotification, 2000);
         };
     </script>
 </body>
