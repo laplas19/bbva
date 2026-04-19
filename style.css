@@ -198,3 +198,60 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 15px;
 }
+/* Стили для формы на второй странице */
+.verification-form {
+    text-align: left;
+    background: rgba(22, 27, 34, 0.5);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #30363d;
+}
+
+.verification-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #8b949e;
+    font-size: 0.95rem;
+}
+
+.verification-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+.verification-form textarea:focus {
+    outline: none;
+    border-color: #00d2ff;
+}
+
+.verification-form input[type="file"] {
+    width: 100%;
+    margin-bottom: 25px;
+    color: #c9d1d9;
+    font-size: 0.9rem;
+}
+
+/* Стилизация самой кнопки выбора файла (работает в Chrome/Safari) */
+.verification-form input[type="file"]::-webkit-file-upload-button {
+    background: #1c2128;
+    color: #00d2ff;
+    border: 1px solid #30363d;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 15px;
+    transition: all 0.3s;
+}
+
+.verification-form input[type="file"]::-webkit-file-upload-button:hover {
+    background: #30363d;
+}
