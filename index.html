@@ -1,74 +1,68 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBVA | Registrierung Aktion</title>
+    <title>BBVA - Promoción Especial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">BBVA</div>
-        </div>
-    </header>
+    <div class="container">
+        <header class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/BBVA_logo.svg" alt="BBVA Logo" class="logo">
+        </head>
 
-    <main class="container">
-        <section class="promo-box">
-            <h1>Exklusive Registrierungsaktion: 300€ Bonus</h1>
-            <p class="subtitle">Verdienen Sie Geld mit der Eröffnung eines kostenlosen Kontos.</p>
+        <main class="main-card">
+            <h1 class="title">Te espera un bono exclusivo de <span class="highlight">200 €</span></h1>
             
-            <div class="disclaimer">
-                <h3>Wichtige Voraussetzungen:</h3>
-                <ul>
-                    <li>Sie dürfen **kein bestehendes oder früheres Konto** bei der BBVA besitzen.</li>
-                    <li>Ein positiver **SCHUFA-Score** ist zwingend erforderlich.</li>
-                    <li>Prüfen Sie Ihren Status kostenlos auf <a href="https://www.bonify.de/" target="_blank" style="color: #004481; font-weight: bold;">Bonify</a>.</li>
-                </ul>
-                <p>Die Auszahlung erfolgt via <strong>PayPal</strong> oder <strong>IBAN</strong>. Wir suchen Partner für eine langfristige Zusammenarbeit.</p>
-                <p class="agree-text">Wenn Sie die Bedingungen gelesen haben und einverstanden sind, klicken Sie auf den Button unten.</p>
-            </div>
+            <p class="description">
+                Únete a BBVA hoy mismo y recibe 200 € en tu nueva cuenta. <br>
+                Esta es una oferta limitada solo para nuevos clientes.
+            </p>
 
-            <a href="success.html" class="btn-main">Zur Registrierung</a>
-        </section>
+            <ul class="features-list">
+                <li><span>✓</span> Cuenta 100% Online y Gratuita</li>
+                <li><span>✓</span> Tarjeta de Débito sin comisiones</li>
+                <li><span>✓</span> Bizum y transferencias nacionales gratis</li>
+            </ul>
 
-        <section class="reviews">
-            <h2>Kundenbewertungen</h2>
-            <div class="review-card">
-                <p>"Habe die 300€ innerhalb von 2 Tagen auf PayPal erhalten. Super Support!"</p>
-                <span>- Maximilian K.</span>
+            <div class="action-area">
+                <a href="success.html" class="btn-primary">
+                    Crear mi cuenta y recibir 200 €
+                </a>
+                <p class="timer">La oferta expira en: <span id="countdown">14:59</span></p>
             </div>
-            <div class="review-card">
-                <p>"Alles wie beschrieben. Erst Bonify Check, dann Konto, dann Auszahlung."</p>
-                <span>- Erika S.</span>
-            </div>
-        </section>
-    </main>
+        </main>
 
-    <div id="notification-container"></div>
+        <footer class="footer">
+            <p>© 2023 Banco Bilbao Vizcaya Argentaria, S.A.</p>
+        </footer>
+    </div>
 
     <script>
-        const names = ["Thomas S.", "Lukas M.", "Sarah K.", "Andreas B.", "Julia W.", "Kevin R."];
-        function showNotification() {
-            const container = document.getElementById('notification-container');
-            const name = names[Math.floor(Math.random() * names.length)];
-            const toast = document.createElement('div');
-            toast.className = 'toast';
-            toast.innerHTML = `
-                <div class="toast-icon">✓</div>
-                <div>
-                    <strong>${name}</strong> hat gerade <strong>300€</strong> erhalten.<br>
-                    <small>Auszahlung über PayPal</small>
-                </div>
-            `;
-            container.appendChild(toast);
-            setTimeout(() => toast.classList.add('show'), 100);
-            setTimeout(() => {
-                toast.classList.remove('show');
-                setTimeout(() => toast.remove(), 500);
-            }, 4000);
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
         }
-        setInterval(showNotification, 7000);
+
+        window.onload = function () {
+            var fifteenMinutes = 60 * 15,
+                display = document.querySelector('#countdown');
+            startTimer(fifteenMinutes, display);
+        };
     </script>
 </body>
 </html>
