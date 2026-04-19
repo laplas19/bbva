@@ -74,43 +74,78 @@
         </footer>
     </div>
 
-    <script>
+  <script>
+    // --- ТАЙМЕР (не сбрасывается при обновлении) ---
     function startTimer() {
         const display = document.querySelector('#countdown');
-        const duration = 15 * 60; // 15 минут в секундах
-        
-        // Проверяем, есть ли уже сохраненное время окончания в памяти браузера
+        const duration = 15 * 60; 
         let endTime = localStorage.getItem('bbva_timer_end');
         let now = Math.floor(Date.now() / 1000);
 
         if (!endTime || now > endTime) {
-            // Если времени нет или оно истекло — создаем новое на 15 минут вперед
             endTime = now + duration;
             localStorage.setItem('bbva_timer_end', endTime);
         }
 
-        const timerInterval = setInterval(function () {
+        setInterval(function () {
             now = Math.floor(Date.now() / 1000);
             let remaining = endTime - now;
-
             if (remaining <= 0) {
-                // Когда время вышло, можно либо остановить, либо пустить по кругу
-                // Пускаем по кругу для эффекта вечной акции:
                 endTime = now + duration;
                 localStorage.setItem('bbva_timer_end', endTime);
                 remaining = duration;
             }
-
-            let minutes = parseInt(remaining / 60, 10);
-            let seconds = parseInt(remaining % 60, 10);
-
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            display.textContent = minutes + ":" + seconds;
+            let minutes = Math.floor(remaining / 60);
+            let seconds = remaining % 60;
+            display.textContent = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
         }, 1000);
     }
 
+    // --- УВЕДОМЛЕНИЯ С РАНДОМНЫМ ИНТЕРВАЛОМ ---
+    const users = [
+        {name: "Markus Weber", img: "1"},
+        {name: "Andreas Koch", img: "2"},
+        {name: "Christian Bauer", img: "3"},
+        {name: "Hannah Scholz", img: "4"},
+        {name: "Lukas Richter", img: "5"},
+        {name: "Sabine Hoffmann", img: "6"}
+    ];
+
+    function showNotification() {
+        const container = document.getElementById('notification-container');
+        if (container.childElementCount > 0) return; // Только одно уведомление за раз
+
+        const user = users[Math.floor(Math.random() * users.length)];
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerHTML = `
+            <div class="toast-content">
+                <img src="https://i.pravatar.cc/150?u=${user.img}" class="toast-avatar">
+                <div>
+                    <strong>${user.name}</strong>
+                    <div style="font-size: 0.75rem; color: #8b949e;">Hat gerade 300€ erhalten</div>
+                </div>
+            </div>`;
+        
+        container.appendChild(toast);
+        setTimeout(() => toast.classList.add('show'), 100);
+
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 500);
+        }, 5000);
+
+        // Планируем следующее появление через рандомное время (от 15 до 40 секунд)
+        const nextDelay = Math.floor(Math.random() * (40000 - 15000 + 1)) + 15000;
+        setTimeout(showNotification, nextDelay);
+    }
+
+    window.onload = function () {
+        startTimer();
+        // Первое уведомление появится через 5-10 секунд после входа
+        setTimeout(showNotification, 7000); 
+    };
+</script>
     // Твои уведомления (оставляем без изменений)
     const names = ["Stefan", "Andreas", "Lukas", "Max", "Julia", "Christian", "Hannah"];
     function showNotification() {
