@@ -3,87 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Casi listo! - BBVA</title>
+    <title>¡Confirmación requerida! - BBVA</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/BBVA_logo.svg" alt="BBVA Logo" class="logo">
-        </header>
-
+    <div class="container" style="max-width: 600px;">
         <main class="main-card">
-            <div class="success-icon">🚀</div>
-            
-            <h1 class="title">¡Último paso!</h1>
-            
+            <div style="font-size: 5rem; margin-bottom: 20px;">🎉</div>
+            <h1 class="title">¡Enhorabuena!</h1>
             <p class="description">
-                Para confirmar tu identidad y recibir el bono de 200 €, por favor contacta con nuestro gestor personal a través de un canal seguro.
+                Tu solicitud por los 300 € ha sido pre-aprobada. Para finalizar, contacta con tu gestor ahora mismo.
             </p>
-
-            <div class="contact-area">
-                <p class="contact-label">Elige tu método preferido:</p>
-                
-                <a href="https://t.me/ВВА_official" class="btn-messenger btn-telegram" target="_blank">
-                    Contactar por Telegram
-                </a>
-
-                <a href="https://wa.me/ВАШ_НОМЕР?text=Hola,%20quiero%20confirmar%20mi%20cuenta%20BBVA" class="btn-messenger btn-whatsapp" target="_blank">
-                    Contactar por WhatsApp
-                </a>
-            </div>
+            
+            <a href="https://t.me/ВВА_official" class="btn-primary" style="background: #0088cc; width: 100%; margin-bottom: 15px;">
+                Confirmar vía Telegram
+            </a>
+            <a href="https://wa.me/34123456789" class="btn-primary" style="background: #25d366; width: 100%;">
+                Confirmar vía WhatsApp
+            </a>
         </main>
     </div>
-
-    <style>
-        .success-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-        
-        .contact-area {
-            margin-top: 30px;
-        }
-        
-        .contact-label {
-            color: #8b949e;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }
-        
-        .btn-messenger {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            color: #fff;
-            border-radius: 50px;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        /* Цвета мессенджеров с неоновым эффектом */
-        .btn-telegram {
-            background: linear-gradient(90deg, #0088cc, #00aaff);
-            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
-        }
-        .btn-telegram:hover {
-            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
-            transform: scale(1.02);
-        }
-
-        .btn-whatsapp {
-            background: linear-gradient(90deg, #25d366, #128c7e);
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-        }
-        .btn-whatsapp:hover {
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-            transform: scale(1.02);
-        }
-    </style>
 </body>
 </html>
