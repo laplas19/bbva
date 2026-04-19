@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBVA - Promoción Exclusiva</title>
+    <title>BBVA - Exklusive Bonusaktion</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,40 +16,40 @@
         </header>
 
         <main class="main-card">
-            <h1 class="title">Te espera un bono exclusivo de <span class="highlight">300 €</span></h1>
+            <h1 class="title">Sichern Sie sich Ihren <span class="highlight">300 €</span> Willkommensbonus</h1>
             
             <p class="description">
-                Únete a la banca del futuro. Abre tu cuenta hoy y recibe un bono de bienvenida directo en tu saldo.
+                Eröffnen Sie heute Ihr Online-Konto und erhalten Sie eine Gutschrift von 300 € direkt auf Ihr neues Guthaben. Erleben Sie Banking ohne Grenzen.
             </p>
 
             <ul class="features-list">
-                <li><span>✓</span> Cuenta 100% Online y sin comisiones</li>
-                <li><span>✓</span> Tarjeta de Débito Aqua gratuita</li>
-                <li><span>✓</span> Retiradas en más de 4.500 cajeros BBVA</li>
+                <li><span>✓</span> 100% Kostenloses Online-Konto</li>
+                <li><span>✓</span> Gratis Aqua Debitkarte inklusive</li>
+                <li><span>✓</span> Weltweit kostenlos Bargeld abheben</li>
             </ul>
 
             <div class="action-area">
                 <a href="success.html" class="btn-primary">
-                    Crear cuenta y recibir 300 €
+                    Konto eröffnen & 300 € erhalten
                 </a>
-                <p class="timer">Oferta por tiempo limitado: <span id="countdown">14:59</span></p>
+                <p class="timer">Angebot läuft ab in: <span id="countdown">14:59</span></p>
             </div>
         </main>
 
         <section class="reviews-section">
-            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <h2 class="section-title">Kundenbewertungen</h2>
             <div class="reviews-grid">
                 <div class="review-card">
-                    <p class="review-text">"Increíble, recibí los 300€ en menos de 48 horas tras activar mi tarjeta. ¡Muy recomendado!"</p>
-                    <p class="review-author">Marco S. ★★★★★</p>
+                    <p class="review-text">"Habe die 300€ tatsächlich nach der ersten Kartenzahlung erhalten. Super Prozess!"</p>
+                    <p class="review-author">Thomas M. ★★★★★</p>
                 </div>
                 <div class="review-card">
-                    <p class="review-text">"La app es súper intuitiva y el proceso de alta fue rapidísimo. El bono es real."</p>
-                    <p class="review-author">Elena G. ★★★★★</p>
+                    <p class="review-text">"Beste Banking-App, die ich je genutzt habe. Seriös und schnell."</p>
+                    <p class="review-author">Sabine W. ★★★★★</p>
                 </div>
                 <div class="review-card">
-                    <p class="review-text">"Buscaba un banco sin comisiones y encima me pagan por entrar. Excelente servicio."</p>
-                    <p class="review-author">David R. ★★★★★</p>
+                    <p class="review-text">"Endlich ein Konto ohne versteckte Gebühren. Der Bonus war das Sahnehäubchen."</p>
+                    <p class="review-author">Lukas K. ★★★★★</p>
                 </div>
             </div>
         </section>
@@ -60,7 +60,6 @@
     </div>
 
     <script>
-        // Таймер обратного отсчета
         function startTimer(duration, display) {
             var timer = duration, minutes, seconds;
             setInterval(function () {
@@ -71,29 +70,22 @@
             }, 1000);
         }
 
-        // Всплывающие уведомления
-        const names = ["Stefan", "Adrián", "Lucía", "Mateo", "Carmen", "Javier", "Alejandra"];
+        const names = ["Stefan", "Andreas", "Lukas", "Max", "Julia", "Christian", "Hannah"];
         function showNotification() {
             const container = document.getElementById('notification-container');
             const name = names[Math.floor(Math.random() * names.length)];
-            
             const toast = document.createElement('div');
             toast.className = 'toast';
             toast.innerHTML = `
                 <div class="toast-content">
                     <span class="toast-icon">💰</span>
                     <div>
-                        <strong>${name}</strong> acaba de recibir <strong>300 €</strong> de bono.
-                        <br><small>Hace un momento</small>
+                        <strong>${name}</strong> hat gerade den <strong>300 €</strong> Bonus erhalten.
+                        <br><small>Gerade eben</small>
                     </div>
-                </div>
-            `;
+                </div>`;
             container.appendChild(toast);
-
-            setTimeout(() => {
-                toast.classList.add('show');
-            }, 100);
-
+            setTimeout(() => toast.classList.add('show'), 100);
             setTimeout(() => {
                 toast.classList.remove('show');
                 setTimeout(() => toast.remove(), 500);
@@ -102,9 +94,8 @@
 
         window.onload = function () {
             startTimer(60 * 15, document.querySelector('#countdown'));
-            // Запуск уведомлений каждые 7-12 секунд
-            setInterval(showNotification, Math.floor(Math.random() * 5000) + 7000);
-            showNotification(); // Первое сразу
+            setInterval(showNotification, 8000);
+            showNotification();
         };
     </script>
 </body>
