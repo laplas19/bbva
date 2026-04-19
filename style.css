@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f7f9;
+    color: #333;
+}
+.container { max-width: 600px; margin: 0 auto; padding: 20px; }
+header { background: #004481; padding: 15px 0; color: white; }
+.logo { font-size: 24px; font-weight: bold; text-align: center; }
+
+.promo-box { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 20px; text-align: center; }
+h1 { color: #004481; font-size: 22px; }
+.disclaimer { text-align: left; background: #f9f9f9; padding: 15px; border-left: 4px solid #004481; margin: 20px 0; }
+.btn-main { display: inline-block; background: #1464A5; color: white; padding: 15px 30px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 15px; border: none; cursor: pointer; }
+
+.messenger-buttons { display: flex; gap: 10px; flex-direction: column; margin: 20px 0; }
+.btn-msg { padding: 15px; border-radius: 4px; text-decoration: none; color: white; font-weight: bold; }
+.tg { background: #0088cc; }
+.wa { background: #25d366; }
+
+.toast {
+    position: fixed; bottom: 20px; left: -300px; background: white; padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-radius: 8px; display: flex; align-items: center; gap: 10px;
+    transition: left 0.5s ease; z-index: 1000; border-left: 4px solid #25d366;
+}
+.toast.show { left: 20px; }
+.toast-icon { background: #25d366; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; }
+
+.review-card { background: #fff; padding: 15px; margin-top: 10px; border-radius: 5px; font-style: italic; border: 1px solid #ddd; }
