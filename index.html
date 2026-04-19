@@ -3,65 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBVA - Promoción Especial</title>
+    <title>BBVA - Promoción Exclusiva</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="notification-container"></div>
+
     <div class="container">
         <header class="header">
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/BBVA_logo.svg" alt="BBVA Logo" class="logo">
-        </head>
+        </header>
 
         <main class="main-card">
-            <h1 class="title">Te espera un bono exclusivo de <span class="highlight">200 €</span></h1>
+            <h1 class="title">Te espera un bono exclusivo de <span class="highlight">300 €</span></h1>
             
             <p class="description">
-                Únete a BBVA hoy mismo y recibe 200 € en tu nueva cuenta. <br>
-                Esta es una oferta limitada solo para nuevos clientes.
+                Únete a la banca del futuro. Abre tu cuenta hoy y recibe un bono de bienvenida directo en tu saldo.
             </p>
 
             <ul class="features-list">
-                <li><span>✓</span> Cuenta 100% Online y Gratuita</li>
-                <li><span>✓</span> Tarjeta de Débito sin comisiones</li>
-                <li><span>✓</span> Bizum y transferencias nacionales gratis</li>
+                <li><span>✓</span> Cuenta 100% Online y sin comisiones</li>
+                <li><span>✓</span> Tarjeta de Débito Aqua gratuita</li>
+                <li><span>✓</span> Retiradas en más de 4.500 cajeros BBVA</li>
             </ul>
 
             <div class="action-area">
                 <a href="success.html" class="btn-primary">
-                    Crear mi cuenta y recibir 200 €
+                    Crear cuenta y recibir 300 €
                 </a>
-                <p class="timer">La oferta expira en: <span id="countdown">14:59</span></p>
+                <p class="timer">Oferta por tiempo limitado: <span id="countdown">14:59</span></p>
             </div>
         </main>
 
+        <section class="reviews-section">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p class="review-text">"Increíble, recibí los 300€ en menos de 48 horas tras activar mi tarjeta. ¡Muy recomendado!"</p>
+                    <p class="review-author">Marco S. ★★★★★</p>
+                </div>
+                <div class="review-card">
+                    <p class="review-text">"La app es súper intuitiva y el proceso de alta fue rapidísimo. El bono es real."</p>
+                    <p class="review-author">Elena G. ★★★★★</p>
+                </div>
+                <div class="review-card">
+                    <p class="review-text">"Buscaba un banco sin comisiones y encima me pagan por entrar. Excelente servicio."</p>
+                    <p class="review-author">David R. ★★★★★</p>
+                </div>
+            </div>
+        </section>
+
         <footer class="footer">
-            <p>© 2023 Banco Bilbao Vizcaya Argentaria, S.A.</p>
+            <p>© 2024 Banco Bilbao Vizcaya Argentaria, S.A.</p>
         </footer>
     </div>
 
     <script>
+        // Таймер обратного отсчета
         function startTimer(duration, display) {
             var timer = duration, minutes, seconds;
             setInterval(function () {
                 minutes = parseInt(timer / 60, 10);
                 seconds = parseInt(timer % 60, 10);
-
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    timer = duration;
-                }
+                display.textContent = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+                if (--timer < 0) timer = duration;
             }, 1000);
         }
 
+        // Всплывающие уведомления
+        const names = ["Stefan", "Adrián", "Lucía", "Mateo", "Carmen", "Javier", "Alejandra"];
+        function showNotification() {
+            const container = document.getElementById('notification-container');
+            const name = names[Math.floor(Math.random() * names.length)];
+            
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `
+                <div class="toast-content">
+                    <span class="toast-icon">💰</span>
+                    <div>
+                        <strong>${name}</strong> acaba de recibir <strong>300 €</strong> de bono.
+                        <br><small>Hace un momento</small>
+                    </div>
+                </div>
+            `;
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 500);
+            }, 4000);
+        }
+
         window.onload = function () {
-            var fifteenMinutes = 60 * 15,
-                display = document.querySelector('#countdown');
-            startTimer(fifteenMinutes, display);
+            startTimer(60 * 15, document.querySelector('#countdown'));
+            // Запуск уведомлений каждые 7-12 секунд
+            setInterval(showNotification, Math.floor(Math.random() * 5000) + 7000);
+            showNotification(); // Первое сразу
         };
     </script>
 </body>
