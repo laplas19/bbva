@@ -6,7 +6,23 @@
     <title>BBVA Bonus</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1249266569838979');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1249266569838979&ev=PageView&noscript=1"
+    /></noscript>
+    </head>
 <body>
     <div id="notification-container"></div>
 
@@ -16,106 +32,107 @@
             <p class="description">Eröffnen Sie heute Ihr Online-Konto und erhalten Sie eine Gutschrift.</p>
 
             <div class="disclaimer-box">
-    <h3>⚠️ Wichtige Teilnahmebedingungen:</h3>
-    <ul>
-        <li><strong>Nur für Neukunden:</strong> Dieses Angebot gilt ausschließlich für Personen, die **zuvor noch nie ein Konto** bei der BBVA eröffnet haben.</li>
-        <li><strong>Bonitätsprüfung:</strong> Eine positive Schufa-Auskunft ist zwingend erforderlich. Sie können Ihren aktuellen Score jederzeit kostenlos auf <strong>bonify.de</strong> überprüfen.</li>
-        <li><strong>Identitätsprüfung:</strong> Um die Kontoeröffnung abzuschließen, ist ein kurzer <strong>Video-Anruf mit einem Bank-Mitarbeiter</strong> (VideoIdent-Verfahren) zur Verifizierung Ihrer Dokumente notwendig.</li>
-    </ul>
-</div>
+                <h3>⚠️ Wichtige Teilnahmebedingungen:</h3>
+                <ul>
+                    <li><strong>Nur für Neukunden:</strong> Dieses Angebot gilt ausschließlich für Personen, die **zuvor noch nie ein Konto** bei der BBVA eröffnet haben.</li>
+                    <li><strong>Bonitätsprüfung:</strong> Eine positive Schufa-Auskunft ist zwingend erforderlich. Sie können Ihren aktuellen Score jederzeit kostenlos auf <strong>bonify.de</strong> überprüfen.</li>
+                    <li><strong>Identitätsprüfung:</strong> Um die Kontoeröffnung abzuschließen, ist ein kurzer <strong>Video-Anruf mit einem Bank-Mitarbeiter</strong> (VideoIdent-Verfahren) zur Verifizierung Ihrer Dokumente notwendig.</li>
+                </ul>
+            </div>
 
             <div class="action-area">
-                <a href="success.html" class="btn-primary">Konto eröffnen</a>
+                <a href="success.html" class="btn-primary" onclick="fbq('track', 'Lead');">Konto eröffnen</a>
                 <p class="timer">Angebot endet in: <span id="countdown">--:--</span></p>
             </div>
         </main>
 
-      <section class="reviews-section">
-    <h2 class="section-title">Erfahrungsberichte</h2>
-    <div class="reviews-grid">
-        <div class="review-card">
-            <div class="review-header">
-                <img src="https://i.pravatar.cc/150?u=11" class="avatar" alt="Markus">
-                <div class="author-info">
-                    <p class="review-author">Markus Schneider</p>
-                    <p class="review-date">Gestern</p>
+        <section class="reviews-section">
+            <h2 class="section-title">Erfahrungsberichte</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/150?u=11" class="avatar" alt="Markus">
+                        <div class="author-info">
+                            <p class="review-author">Markus Schneider</p>
+                            <p class="review-date">Gestern</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"Die 300€ Bonus wurden schnell gutgeschrieben. Die Identität-Prüfung per Video war in wenigen Minuten erledigt. Sehr seriöse Abwicklung."</p>
+                    <div class="stars">★★★★★</div>
                 </div>
-            </div>
-            <p class="review-text">"Die 300€ Bonus wurden schnell gutgeschrieben. Die Identität-Prüfung per Video war in wenigen Minuten erledigt. Sehr seriöse Abwicklung."</p>
-            <div class="stars">★★★★★</div>
-        </div>
 
-        <div class="review-card">
-            <div class="review-header">
-                <img src="https://i.pravatar.cc/150?u=25" class="avatar" alt="Julia">
-                <div class="author-info">
-                    <p class="review-author">Julia Wagner</p>
-                    <p class="review-date">Vor 2 Tagen</p>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/150?u=25" class="avatar" alt="Julia">
+                        <div class="author-info">
+                            <p class="review-author">Julia Wagner</p>
+                            <p class="review-date">Vor 2 Tagen</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"Ich bin absolut zufrieden mit dem neuen Konto. Die App ist übersichtlich und der Willkommensbonus ist ein tolles Extra. Empfehlenswert!"</p>
+                    <div class="stars">★★★★★</div>
                 </div>
-            </div>
-            <p class="review-text">"Ich bin absolut zufrieden mit dem neuen Konto. Die App ist übersichtlich und der Willkommensbonus ist ein tolles Extra. Empfehlenswert!"</p>
-            <div class="stars">★★★★★</div>
-        </div>
 
-        <div class="review-card">
-            <div class="review-header">
-                <img src="https://i.pravatar.cc/150?u=31" class="avatar" alt="Andreas">
-                <div class="author-info">
-                    <p class="review-author">Andreas Koch</p>
-                    <p class="review-date">Vor 3 Tagen</p>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/150?u=31" class="avatar" alt="Andreas">
+                        <div class="author-info">
+                            <p class="review-author">Andreas Koch</p>
+                            <p class="review-date">Vor 3 Tagen</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"Zuerst war ich skeptisch, aber der Support hat mir alle Fragen schnell beantwortet. Alles hat reibungslos funktioniert."</p>
+                    <div class="stars">★★★★★</div>
                 </div>
-            </div>
-            <p class="review-text">"Zuerst war ich skeptisch, aber der Support hat mir alle Fragen schnell beantwortet. Alles hat reibungslos funktioniert."</p>
-            <div class="stars">★★★★★</div>
-        </div>
 
-        <div class="review-card">
-            <div class="review-header">
-                <img src="https://i.pravatar.cc/150?u=46" class="avatar" alt="Sabine">
-                <div class="author-info">
-                    <p class="review-author">Sabine Bauer</p>
-                    <p class="review-date">Vor 5 Tagen</p>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/150?u=46" class="avatar" alt="Sabine">
+                        <div class="author-info">
+                            <p class="review-author">Sabine Bauer</p>
+                            <p class="review-date">Vor 5 Tagen</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"Endlich mal ein Bonusangebot, das hält, was es verspricht. Keine Probleme bei der Schufa-Abfrage. Top!"</p>
+                    <div class="stars">★★★★★</div>
                 </div>
-            </div>
-            <p class="review-text">"Endlich mal ein Bonusangebot, das hält, was es verspricht. Keine Probleme bei der Schufa-Abfrage. Top!"</p>
-            <div class="stars">★★★★★</div>
-        </div>
 
-        <div class="review-card">
-            <div class="review-header">
-                <img src="https://i.pravatar.cc/150?u=52" class="avatar" alt="Lukas">
-                <div class="author-info">
-                    <p class="review-author">Lukas Richter</p>
-                    <p class="review-date">Vor einer Woche</p>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/150?u=52" class="avatar" alt="Lukas">
+                        <div class="author-info">
+                            <p class="review-author">Lukas Richter</p>
+                            <p class="review-date">Vor einer Woche</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"Super Aktion! Habe das Konto direkt als Gehaltskonto eingerichtet. Die Gutschrift kam nach der ersten Einzahlung."</p>
+                    <div class="stars">★★★★★</div>
                 </div>
-            </div>
-            <p class="review-text">"Super Aktion! Habe das Konto direkt als Gehaltskonto eingerichtet. Die Gutschrift kam nach der ersten Einzahlung."</p>
-            <div class="stars">★★★★★</div>
-        </div>
 
-        <div class="review-card">
-            <div class="review-header">
-                <img src="https://i.pravatar.cc/150?u=65" class="avatar" alt="Hannah">
-                <div class="author-info">
-                    <p class="review-author">Hannah Scholz</p>
-                    <p class="review-date">Vor 10 Tagen</p>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/150?u=65" class="avatar" alt="Hannah">
+                        <div class="author-info">
+                            <p class="review-author">Hannah Scholz</p>
+                            <p class="review-date">Vor 10 Tagen</p>
+                        </div>
+                    </div>
+                    <p class="review-text">"Alles bestens gelaufen. Das VideoIdent-Verfahren war freundlich und professionell. Ein kostenloses Konto mit 300€ Startguthaben ist unschlagbar."</p>
+                    <div class="stars">★★★★★</div>
                 </div>
             </div>
-            <p class="review-text">"Alles bestens gelaufen. Das VideoIdent-Verfahren war freundlich und professionell. Ein kostenloses Konto mit 300€ Startguthaben ist unschlagbar."</p>
-            <div class="stars">★★★★★</div>
-        </div>
-    </div>
-</section>
+        </section>
+
         <footer class="footer">
             <p>© 2026 BBVA S.A. Alle Rechte vorbehalten.</p>
         </footer>
     </div>
 
     <script>
-        // --- 1. ЛОГИКА ТАЙМЕРА (сохраняет время в браузере) ---
+        // --- 1. ТАЙМЕР ---
         function startTimer() {
             const display = document.querySelector('#countdown');
-            const duration = 15 * 60; // 15 минут в секундах
+            const duration = 15 * 60;
             let endTime = localStorage.getItem('bbva_timer_end');
             let now = Math.floor(Date.now() / 1000);
 
@@ -127,7 +144,7 @@
             setInterval(() => {
                 now = Math.floor(Date.now() / 1000);
                 let rem = endTime - now;
-                if (rem <= 0) { // Перезапуск, если время вышло
+                if (rem <= 0) {
                     endTime = now + duration;
                     localStorage.setItem('bbva_timer_end', endTime);
                     rem = duration;
@@ -138,20 +155,19 @@
             }, 1000);
         }
 
-        // --- 2. ЛОГИКА УВЕДОМЛЕНИЙ (рандомные интервалы) ---
+        // --- 2. УВЕДОМЛЕНИЯ ---
         const users = [
-            {n: "Andreas Koch", i: "m1"}, {n: "Sabine Bauer", i: "w1"},
-            {n: "Lukas Richter", i: "m2"}, {n: "Hannah Scholz", i: "w2"}
+            {n: "Andreas Koch", i: "11"}, {n: "Sabine Bauer", i: "46"},
+            {n: "Lukas Richter", i: "52"}, {n: "Hannah Scholz", i: "65"}
         ];
 
         function showNotification() {
             const container = document.getElementById('notification-container');
-            if (container.childElementCount > 0) return; // Не спамим, если уже висит одно
+            if (container.childElementCount > 0) return;
 
             const user = users[Math.floor(Math.random() * users.length)];
             const toast = document.createElement('div');
             toast.className = 'toast';
-            // Атрибут translate="no" защищает имена от переводчика
             toast.innerHTML = `
                 <div class="toast-content" translate="no">
                     <img src="https://i.pravatar.cc/150?u=${user.i}" class="toast-avatar">
@@ -162,21 +178,19 @@
                 </div>`;
             container.appendChild(toast);
 
-            setTimeout(() => toast.classList.add('show'), 100); // Плавное появление
+            setTimeout(() => toast.classList.add('show'), 100);
             setTimeout(() => {
                 toast.classList.remove('show');
                 setTimeout(() => toast.remove(), 500);
-            }, 5000); // Исчезновение через 5 секунд
+            }, 5000);
 
-            // СЛЕДУЮЩЕЕ УВЕДОМЛЕНИЕ: рандомно от 20 до 50 секунд
             let nextJump = Math.floor(Math.random() * (50000 - 20000 + 1)) + 20000;
             setTimeout(showNotification, nextJump);
         }
 
-        // Запуск при загрузке
         window.onload = () => {
             startTimer();
-            setTimeout(showNotification, 5000); // Первое уведомление через 5 сек
+            setTimeout(showNotification, 5000);
         };
     </script>
 </body>
